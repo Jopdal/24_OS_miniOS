@@ -4,7 +4,7 @@
 #include <time.h>
 
 #define MAX_PROCESSES 10
-#define TIME_SLICE 2
+#define TIME_SLICE 1
 
 typedef struct Process {
     int id;
@@ -46,7 +46,7 @@ int rr() {
     srand(time(NULL));
 
     for (i = 0; i < num_processes; i++) {
-        processes[i].id = i;
+        processes[i].id = i+1;
         processes[i].remaining_time = rand() % 10 + 1; // Generating random processing time (1 to 10)
     }
 
