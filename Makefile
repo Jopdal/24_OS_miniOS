@@ -8,7 +8,7 @@ LDFLAGS=-lreadline
 TARGET=minios
 
 # Source, Object files
-SRCS=kernel/kernel.c kernel/system.c kernel/20202894/RR.c
+SRCS=kernel/kernel.c kernel/system.c kernel/20202894/rr.c
 OBJS=$(SRCS:.c=.o) 
 
 # Include directory

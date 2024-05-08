@@ -5,6 +5,8 @@
 #include <readline/history.h>
 
 #include "system.h"
+#include "rr.h"
+
 void print_minios(char* str);
 
 int main() {
@@ -24,8 +26,8 @@ int main() {
             minisystem();
         }
 
-        else if (strcmp(input,"RR") ==  0){
-            RR();
+        else if (strcmp(input,"rr") ==  0){
+            rr();
         }
         else system(input);
     }

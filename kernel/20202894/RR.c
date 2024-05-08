@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
+#include <unistd.h> // sleep 함수를 사용하기 위해 필요한 헤더 파일
+#include <time.h>
 
 #define MAX_PROCESSES 10
 #define TIME_SLICE 2
@@ -11,7 +12,6 @@ typedef struct Process {
 } Process;
 
 void run_round_robin(Process processes[], int num_processes) {
-    int i, j;
     int total_remaining = num_processes;
     int current_process = 0;
 
@@ -31,7 +31,7 @@ void run_round_robin(Process processes[], int num_processes) {
     }
 }
 
-int RR() {
+int rr() {
     int num_processes, i;
     Process processes[MAX_PROCESSES];
 
